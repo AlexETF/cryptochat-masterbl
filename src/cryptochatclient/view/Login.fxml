@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="518.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cryptochatclient.controller.LoginController">
+   <children>
+      <AnchorPane layoutX="56.0" layoutY="30.0" prefHeight="461.0" prefWidth="830.0" styleClass="main" stylesheets="@css/login.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="imgLogo" fitHeight="141.0" fitWidth="355.0" layoutX="29.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="446.0" />
+            <Label layoutX="48.0" layoutY="260.0" prefHeight="25.0" prefWidth="336.0" text="Username:" AnchorPane.leftAnchor="48.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <TextField fx:id="txtUsername" layoutX="48.0" layoutY="288.0" prefHeight="25.0" prefWidth="318.0" AnchorPane.leftAnchor="48.0">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <Label layoutX="475.0" layoutY="124.0" prefHeight="30.0" prefWidth="355.0" text="Server IP:" AnchorPane.leftAnchor="475.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <TextField fx:id="txtIPAdress" layoutX="475.0" layoutY="154.0" prefHeight="25.0" prefWidth="286.0" AnchorPane.leftAnchor="475.0">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <Label layoutX="475.0" layoutY="184.0" prefHeight="30.0" prefWidth="355.0" text="Port:" AnchorPane.leftAnchor="475.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <TextField fx:id="txtPort" layoutX="475.0" layoutY="213.0" prefHeight="25.0" prefWidth="151.0" AnchorPane.leftAnchor="475.0">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <Label fx:id="lblServerConnectionError" layoutX="48.0" layoutY="397.0" prefHeight="77.0" prefWidth="318.0" text="Label" textFill="#f80202" AnchorPane.bottomAnchor="44.0" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="464.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Separator layoutX="411.0" layoutY="30.0" orientation="VERTICAL" prefHeight="403.0" prefWidth="7.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="412.0" AnchorPane.rightAnchor="412.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="lblConfigurationError" layoutX="475.0" layoutY="251.0" prefHeight="43.0" prefWidth="286.0" text="Label" textFill="#d70404">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Button fx:id="btnLogin" layoutX="48.0" layoutY="352.0" mnemonicParsing="false" onAction="#btnLoginPressed" prefHeight="25.0" prefWidth="137.0" text="Login">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

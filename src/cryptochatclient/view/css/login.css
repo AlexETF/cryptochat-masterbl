@@ -1,0 +1,20 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.main {
+    -fx-background-color: #3498db;
+}
+
+.button {
+    -fx-background-color: #75ab00;
+    -fx-text-fill: white;
+}
+
+.text-field {
+    -fx-background-color: #e4eef2;
+}
+
+.label {
+    -fx-text-fill: white;
+}

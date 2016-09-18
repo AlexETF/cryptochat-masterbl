@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="519.0" prefWidth="767.0" stylesheets="@css/crypto.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cryptochatclient.controller.CryptoChatController">
+   <children>
+      <BorderPane layoutX="142.0" layoutY="96.0" prefHeight="463.0" prefWidth="684.0" styleClass="main" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <BorderPane prefHeight="73.0" prefWidth="767.0" styleClass="main" BorderPane.alignment="CENTER">
+               <top>
+                  <MenuBar fx:id="menuMainMenu" BorderPane.alignment="CENTER">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Delete" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </top>
+               <center>
+                  <AnchorPane prefHeight="83.0" prefWidth="767.0" styleClass="main" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="imgUser" fitHeight="67.0" fitWidth="106.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="641.0" AnchorPane.topAnchor="5.0" />
+                        <Label fx:id="lblConnectedUser" layoutX="25.0" layoutY="4.0" prefHeight="40.0" prefWidth="501.0" styleClass="user_label" text="Label" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </top>
+         <center>
+            <SplitPane dividerPositions="0.6847507331378299" prefHeight="160.0" prefWidth="200.0" styleClass="border" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <BorderPane prefHeight="356.0" prefWidth="464.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <bottom>
+                              <AnchorPane prefHeight="78.0" prefWidth="521.0" styleClass="main" BorderPane.alignment="TOP_CENTER">
+                                 <children>
+                                    <TextArea fx:id="txtMessage" layoutX="79.0" layoutY="11.0" prefHeight="63.0" prefWidth="335.0" styleClass="tabPane" wrapText="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="79.0" AnchorPane.rightAnchor="107.0" AnchorPane.topAnchor="5.0" />
+                                    <Button fx:id="btnSendMessage" layoutX="425.0" layoutY="12.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="90.0" text="Send" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font></Button>
+                                    <Label layoutX="-2.0" layoutY="6.0" prefHeight="20.0" prefWidth="74.0" text="Message:" textFill="#fffbfb" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font></Label>
+                                 </children>
+                              </AnchorPane>
+                           </bottom>
+                           <center>
+                              <TabPane fx:id="tabPaneUsers" prefHeight="200.0" prefWidth="200.0" styleClass="tabPane" tabClosingPolicy="ALL_TABS" BorderPane.alignment="CENTER" />
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <BorderPane layoutX="6.0" layoutY="67.0" prefHeight="356.0" prefWidth="212.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <center>
+                              <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" styleClass="main" BorderPane.alignment="CENTER">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" styleClass="main">
+                                       <children>
+                                          <TreeView fx:id="treeUsers" layoutX="26.0" layoutY="-13.0" prefHeight="174.0" prefWidth="210.0" styleClass="tabPane" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <BorderPane layoutX="14.0" layoutY="-32.0" prefHeight="174.0" prefWidth="210.0" styleClass="main" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <top>
+                                                <ToolBar prefHeight="19.0" prefWidth="236.0" styleClass="main" BorderPane.alignment="CENTER">
+                                                  <items>
+                                                      <Label prefHeight="27.0" prefWidth="187.0" text="Communication logs" textFill="#fffdfd">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                  </items>
+                                                </ToolBar>
+                                             </top>
+                                             <center>
+                                                <TextArea fx:id="txtCommLogs" editable="false" prefHeight="200.0" prefWidth="200.0" styleClass="tabPane" wrapText="true" BorderPane.alignment="CENTER">
+                                                   <BorderPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </BorderPane.margin>
+                                                </TextArea>
+                                             </center>
+                                          </BorderPane>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </SplitPane>
+         </center>
+         <bottom>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" styleClass="main" BorderPane.alignment="CENTER">
+               <items>
+                  <Label fx:id="lblStatus" prefHeight="29.0" prefWidth="751.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+               </items>
+               <BorderPane.margin>
+                  <Insets top="3.0" />
+               </BorderPane.margin>
+            </ToolBar>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
